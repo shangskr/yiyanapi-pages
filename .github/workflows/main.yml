@@ -1,0 +1,22 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  schedule:
+    - cron: '*/20 * * * *' # 每20分钟执行一次
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v3.3.7
+        with:
+          token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          project: yiyanapi-pages
+          entrypoint: npm run build #根据你的项目设置，这里假设使用npm run build生成静态文件
