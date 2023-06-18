@@ -17,7 +17,7 @@ jobs:
       - name: Setup WARP
         uses: fscarmen/warp-on-actions@v2
       - name: Cloudflare pages build
-        uses: Cyb3r-Jak3/actions-cloudflare-pages@<Latest Release>
+        uses: Cyb3r-Jak3/actions-cloudflare-pages@v1.0.1
         with:
          account: ${{ secrets.CLOUDFLARE_ZONE }}
          project: ${{ secrets.CLOUDFLARE_PROJECT }}
