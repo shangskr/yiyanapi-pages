@@ -13,10 +13,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@1
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         with:
-          token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          project: yiyanapi-pages
-          entrypoint: bash start.sh #根据你的项目设置，这里假设使用npm run build生成静态文件
+         mjuapiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+         accountId: 00f29ec2fcf0e10fd7dcbb9f7ebd2700
+         projectName: yiyanapi-pages
+      # Enable Wrangler v3
+         wranglerVersion: '3'
