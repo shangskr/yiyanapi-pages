@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Setup WARP
+        uses: fscarmen/warp-on-actions@v2
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
