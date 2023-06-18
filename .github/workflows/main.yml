@@ -20,5 +20,6 @@ jobs:
          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
          accountId: 00f29ec2fcf0e10fd7dcbb9f7ebd2700
          projectName: yiyanapi-pages
+         directory: /
       # Enable Wrangler v3
          wranglerVersion: '3'
