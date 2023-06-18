@@ -17,7 +17,7 @@ jobs:
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
-         mjuapiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
          accountId: 00f29ec2fcf0e10fd7dcbb9f7ebd2700
          projectName: yiyanapi-pages
       # Enable Wrangler v3
