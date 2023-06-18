@@ -3,6 +3,7 @@ name: Deploy to Cloudflare Pages
 on:
   schedule:
     - cron: '*/20 * * * *' # 每20分钟执行一次
+  workflow_dispatch:
   push:
     branches:
       - master
